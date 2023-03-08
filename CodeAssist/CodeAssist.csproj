@@ -1,13 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <PackageId>CodeAssist</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>tikiyu</Authors>
+	  <Company></Company>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageProjectUrl>https://github.com/tikiyu/CodeAssist</PackageProjectUrl>
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	  <None Include="..\README.md" Pack="true" PackagePath="\"/>
+	  <None Include="..\LICENSE.txt" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

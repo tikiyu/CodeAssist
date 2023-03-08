@@ -3,7 +3,7 @@ CodeAssist is a .NET library that provides extension methods for strings that ar
 
 ## Installation
 
-To use CodeAssist in your .NET project, you can install it via [NuGet]():
+To use CodeAssist in your .NET project, you can install it via [NuGet](https://www.nuget.org/packages/CodeAssist/):
 
 ```sh
 PM> Install-Package CodeAssist
