@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace CodeAssist.String
@@ -35,7 +38,7 @@ namespace CodeAssist.String
             var normalized = value.Normalize(NormalizationForm.FormD);
             var bytes = new byte[normalized.Length * sizeof(char)];
             Buffer.BlockCopy(normalized.ToCharArray(), 0, bytes, 0, bytes.Length);
-            Regex regex = new("[^a-zA-Z0-9 ]");
+            Regex regex = new Regex("[^a-zA-Z0-9 ]");
             return regex.Replace(Encoding.ASCII.GetString(bytes), "");
         }
 
@@ -95,7 +98,7 @@ namespace CodeAssist.String
         /// <exception cref="ArgumentException"></exception>
         public static int RomanToInt(this string value)
         {
-            Dictionary<char, int> romanValues = new()
+            Dictionary<char, int> romanValues = new Dictionary<char, int>()
             {
                 { 'I', 1 },
                 { 'V', 5 },

@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Linq;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -212,7 +214,7 @@ namespace CodeAssist.String
         {
             try
             {
-                XmlDocument doc = new();
+                XmlDocument doc = new XmlDocument();
                 doc.LoadXml(value);
                 return true;
             }
